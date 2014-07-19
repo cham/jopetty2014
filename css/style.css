@@ -22,14 +22,68 @@ body {
     font-weight: 300;
 }
 .lighttext {
-    font-weight: 100;
+    font-weight: 200;
+}
+a.green-link {
+    color: #17a98c;
 }
 
 
-/* main column */
+/* columns and sections */
 .column-wrapper {
     margin: 0 auto;
     max-width: 1200px;
+    min-width: 425px;
+    overflow: hidden;
+}
+.innercolumn {
+    margin: 0 auto;
+    max-width: 970px;
+    overflow: hidden;
+}
+.three-col {
+    padding: 15px;
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 25px;
+    text-align: left;
+}
+.four-col {
+    padding: 15px 40px;
+    width: 25%;
+    float: left;
+    vertical-align: top;
+    line-height: 25px;
+}
+@media screen and (max-width: 865px){
+    .three-col , .four-col{
+        width: 100%;
+        text-align: center;
+    }
+}
+.whitesection {
+    background: #fff;
+    color: #7f8c8d;
+    padding: 110px 40px;
+    text-align: center;
+}
+.whitesection h1,
+.whitesection h2 {
+    color: #2c3e50;
+    font-weight: 200;
+    font-size: 30px;
+}
+.whitesection h1 {
+    font-weight: 300;
+}
+.whitesection h2 {
+    font-size: 22px;
+}
+.whitesection .innercolumn {
+    margin-top: 65px;
+    margin-bottom: 53px;
+    line-height: 36px;
 }
 
 
@@ -38,7 +92,7 @@ body {
     font-weight: 500;
     display: inline-block;
     border-radius: 6px;
-    padding: 8px 30px;
+    padding: 9px 20px;
     margin: 0 15px;
     font-size: 18px;
     color: #fff;
@@ -50,6 +104,11 @@ body {
 .button-outline-white {
     background: transparent;
     border: 2px solid #fff;
+}
+.button-outline-green {
+    background: transparent;
+    border: 2px solid #17a98c;
+    color: #17a98c;
 }
 
 
@@ -63,11 +122,20 @@ body {
 .stickynav {
     height: 80px;
     background: #0e0d0e;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.stickynav.fixed {
+    position: fixed;
+}
+.stickynav.fixed + section {
+    margin-top: 80px;
 }
 .nav-content {
     margin: 0 auto;
     max-width: 980px;
-    min-width: 400px;
+    min-width: 425px;
     padding: 15px;
 }
 .stickynav-list,
@@ -137,14 +205,16 @@ body {
         top: 16px;
     }
     #toggle-content:checked ~ .page-links {
+        border: 1px solid white;
+        padding: 15px;
         display: block;
         width: 200px;
-        border: 1px solid white;
         position: absolute;
         right: 0;
-        padding: 15px;
+        background: #0e0d0e;
     }
     #toggle-content:checked ~ .page-links .stickynav-item {
         display: block;
     }
 }
+

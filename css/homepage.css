@@ -1,17 +1,17 @@
 .homepage {
     background: #0e0d0e;
 }
+
 .splash {
     background: url(../img/home-splash.jpg) top center no-repeat;
     height: 882px;
     padding-top: 214px;
     text-align: center;
-    color: #fff;
-    /*display: none;*/
+    color: #fff;=
 }
 .splash h1 {
     font-size: 43px;
-    margin-top: 52px; /* standardise? */
+    margin-top: 52px;
     margin-bottom: 23px;
 }
 .splash p {
@@ -20,4 +20,54 @@
     font-size: 25px;
     margin-bottom: 81px;
     padding: 0 20px;
+}
+
+
+.about h1 {
+    font-size: 35px;
+}
+.about h1,
+.about h2 {
+    font-weight: 500;
+}
+.about-intro {
+    font-size: 25px;
+    margin: 46px auto 39px;
+    max-width: 860px;
+}
+.about-getintouch {
+    margin: 40px 0 58px;
+    font-size: 17px;
+}
+
+
+.services-intro {
+    background: url(../img/services.jpg) top center no-repeat;
+    height: 800px;
+}
+
+
+.services {
+    border-bottom: 1px solid #ecf0f1;
+}
+.services .four-col p {
+    margin-top: 35px;
+}
+
+
+.experience .innercolumn {
+    max-width: 730px;
+}
+.experience .four-col {
+    height: 120px;
+}
+.experience .three-col {
+    text-align: center;
+    height: 120px;
+}
+
+
+.case-studies-intro {
+    background: url(../img/case-studies.jpg) top center no-repeat;
+    height: 737px;
 }

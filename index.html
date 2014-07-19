@@ -6,12 +6,45 @@
     <meta name="description" content="Website for Jo Petty, copywriter">
     <meta name="author" content="Jo Petty">
     <link href="css/normalize.3.0.1.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/homepage.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,100,500" rel="stylesheet" type="text/css">
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
 
-<body>
+<body class="homepage">
+    <div class="column-wrapper">
+        <header class="splash">
+            <img src="img/logo.png">
+            <h1 class="lighttext">Cat got your tongue?</h1>
+            <p class="lighttext">
+                You've come to the right place. I specialise in writing unique website copy,
+                creating dynamic content strategies, and saying more with less.
+            </p>
+            <a href="#" class="button button-solid-green">Get in touch</a>
+            <a href="#" class="button button-outline-white">See what I do</a>
+        </header>
+        <nav class="stickynav">
+            <div class="nav-content">
+                <img src="img/logo-nav.png">
+                <label class="burger-menu" for="toggle-content">Menu</label>
+                <input class="toggler" type="checkbox" id="toggle-content">
+                <ul class="stickynav-list page-links">
+                    <li class="stickynav-item"><a href="#about">About</a></li>
+                    <li class="stickynav-item"><a href="#services">Services</a></li>
+                    <li class="stickynav-item"><a href="#case-studies">Case Studies</a></li>
+                    <li class="stickynav-item"><a href="#blog">Blog</a></li>
+                    <li class="stickynav-item"><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="stickynav-list social-media">
+                    <li class="stickynav-item"><a href="#" class="twitter">Twitter</a></li>
+                    <li class="stickynav-item"><a href="#" class="linkedin">LinkedIn</a></li>
+                    <li class="stickynav-item"><a href="#" class="gplus">Google+</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </body>
 </html>

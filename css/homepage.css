@@ -1,0 +1,23 @@
+.homepage {
+    background: #0e0d0e;
+}
+.splash {
+    background: url(../img/home-splash.jpg) top center no-repeat;
+    height: 882px;
+    padding-top: 214px;
+    text-align: center;
+    color: #fff;
+    /*display: none;*/
+}
+.splash h1 {
+    font-size: 43px;
+    margin-top: 52px; /* standardise? */
+    margin-bottom: 23px;
+}
+.splash p {
+    max-width: 820px;
+    margin: 0 auto;
+    font-size: 25px;
+    margin-bottom: 81px;
+    padding: 0 20px;
+}

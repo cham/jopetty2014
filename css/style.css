@@ -1,0 +1,150 @@
+/* box sizing */
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+/* normalize */
+h1, p {
+    margin: 0;
+}
+ul, li {
+    list-style-type: 0;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/* text */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.lighttext {
+    font-weight: 100;
+}
+
+
+/* main column */
+.column-wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+/* buttons */
+.button {
+    font-weight: 500;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 8px 30px;
+    margin: 0 15px;
+    font-size: 18px;
+    color: #fff;
+}
+.button-solid-green {
+    background: #17a98c;
+    border: 2px solid #17a98c;
+}
+.button-outline-white {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+
+/* tools */
+.toggler {
+    display: none;
+}
+
+
+/* stickynav */
+.stickynav {
+    height: 80px;
+    background: #0e0d0e;
+}
+.nav-content {
+    margin: 0 auto;
+    max-width: 980px;
+    min-width: 400px;
+    padding: 15px;
+}
+.stickynav-list,
+.stickynav-item {
+    display: inline-block;
+}
+.stickynav-item {
+    font-weight: 500;
+    margin-right: 26px;
+    font-size: 18px;
+}
+.stickynav-item a {
+    color: #fff;
+}
+.page-links {
+    margin-left: 139px;
+}
+.social-media {
+    position: relative;
+    top: 5px;
+    margin-left: 7px;
+}
+.social-media a {
+    display: block;
+    width: 25px;
+    height: 24px;
+    text-indent: 100%;
+    overflow: hidden;
+}
+.social-media .stickynav-item {
+    margin-right: 13px;
+}
+.social-media .stickynav-item:last {
+    margin-right: 0;
+}
+.social-media .twitter {
+    background: url(../img/twitter-logo-white.png) top left no-repeat;
+}
+.social-media .linkedin {
+    background: url(../img/linkedin-logo-white.png) top left no-repeat;
+}
+.social-media .gplus {
+    background: url(../img/gplus-logo-white.png) top left no-repeat;
+}
+.burger-menu {
+    display: none;
+    float: right;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    position: relative;
+    margin-left: 30px;
+    text-indent: 100%;
+    background: url(../img/burger-icon.png) top left no-repeat;
+    cursor: pointer;
+}
+@media screen and (max-width: 1080px){
+    .page-links {
+        display: none;
+    }
+    .social-media {
+        float: right;
+        top: 16px;
+    }
+    .burger-menu {
+        display: block;
+        top: 16px;
+    }
+    #toggle-content:checked ~ .page-links {
+        display: block;
+        width: 200px;
+        border: 1px solid white;
+        position: absolute;
+        right: 0;
+        padding: 15px;
+    }
+    #toggle-content:checked ~ .page-links .stickynav-item {
+        display: block;
+    }
+}

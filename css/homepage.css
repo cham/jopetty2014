@@ -3,7 +3,7 @@
 }
 
 .splash {
-    background: url(../img/home-splash.jpg) top center no-repeat;
+    background: #0e0d0e url(../img/home-splash.jpg) top center no-repeat;
     background-position-y: -200px;
     height: 882px;
     padding-top: 214px;

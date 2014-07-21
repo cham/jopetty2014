@@ -4,10 +4,11 @@
 
 .splash {
     background: url(../img/home-splash.jpg) top center no-repeat;
+    background-position-y: -200px;
     height: 882px;
     padding-top: 214px;
     text-align: center;
-    color: #fff;=
+    color: #fff;
 }
 .splash h1 {
     font-size: 43px;
@@ -43,7 +44,26 @@
 
 .services-intro {
     background: url(../img/services.jpg) top center no-repeat;
+    background-position-y: -200px;
     height: 800px;
+}
+.services-intro-header {
+    margin: 0 auto;
+    width: 300px;
+    position: relative;
+}
+.services-intro-header h2 {
+    position: absolute;
+    top: 321px;
+    width: 300px;
+    height: 119px;
+    padding-left: 52px;
+    padding-top: 20px;
+    font-size: 46px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 0;
+    border: 8px solid #fff;
 }
 
 
@@ -69,5 +89,102 @@
 
 .case-studies-intro {
     background: url(../img/case-studies.jpg) top center no-repeat;
+    background-position-y: -200px;
     height: 737px;
+}
+
+
+.case-studies {
+    padding: 0 40px;
+    border-bottom: 1px solid #ecf0f1;
+}
+.case-studies .three-col {
+    height: 300px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 110px;
+}
+.case-studies .three-col img {
+    margin: 0 auto;
+}
+.case-studies .three-col h2 {
+    font-weight: 500;
+    margin: 0 auto 30px;
+}
+.case-study-image-link {
+    height: 150px;
+    display: block;
+}
+.case-studies-intro-header {
+    margin: 0 auto;
+    width: 317px;
+    position: relative;
+}
+.case-studies-intro-header h2 {
+    position: absolute;
+    top: 315px;
+    width: 370px;
+    height: 119px;
+    padding-top: 20px;
+    font-size: 54px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 0;
+}
+
+
+.testimonial .innercolumn {
+    max-width: 860px;
+}
+.testimonial-quote {
+    font-size: 30px;
+    margin-bottom: 45px;
+}
+.testimonial-citation {
+    font-size: 18px;
+    color: #bdc3c7;
+}
+
+
+.getintouch {
+    padding-top: 120px;
+}
+.getintouch .innercolumn {
+    margin-top: 20px;
+}
+.getintouch h1 {
+    font-size: 35px;
+}
+.getintouch p {
+    font-size: 22px;
+}
+
+
+.getintouch-details {
+    background: url(../img/map.jpg) top center no-repeat;
+    background-position-y: -200px;
+    /*background: url(../reference/map.jpg) top center no-repeat;*/
+    height: 525px;
+}
+.getintouch-details .innercolumn {
+    max-width: 330px;
+    padding-top: 85px;
+    text-align: center;
+    color: #fff;
+}
+.getintouch-details h1 {
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.getintouch-icons {
+    margin-top: 65px;
+    text-align: left;
+    font-size: 26px;
+    font-weight: 500;
+    color: #14ddb3;
+}
+#gmap_canvas {
+    overflow: hidden;
+    height: 340px;
+    background: url(../img/no-googlemaps-2.png) top center no-repeat;
 }

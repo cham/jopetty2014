@@ -3,6 +3,30 @@
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
+
+/* animations */
+@-webkit-keyframes wiggle {
+    from {-webkit-transform: rotateZ(3deg);}
+    50% {-webkit-transform: rotateZ(-3deg);}
+    to {-webkit-transform: rotateZ(3deg);}
+}
+@keyframes wiggle {
+    from {transform: rotateZ(3deg);}
+    50% {transform: rotateZ(-3deg);}
+    to {transform: rotateZ(3deg);}
+}
+.wiggler {
+    -webkit-animation-name: wiggle;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+    animation-name: wiggle;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+
 /* normalize */
 h1, p {
     margin: 0;
@@ -35,6 +59,7 @@ a.green-link {
     max-width: 1200px;
     min-width: 425px;
     overflow: hidden;
+    background: #fff;
 }
 .innercolumn {
     margin: 0 auto;
@@ -110,6 +135,17 @@ a.green-link {
     border: 2px solid #17a98c;
     color: #17a98c;
 }
+.button-email {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 132px;
+    height: 45px;
+    border: 0;
+    text-indent: 100%;
+    background: url(../img/email-button.png) top left no-repeat;
+    cursor: pointer;
+}
 
 
 /* tools */
@@ -128,6 +164,7 @@ a.green-link {
 }
 .stickynav.fixed {
     position: fixed;
+    z-index: 1;
 }
 .stickynav.fixed + section {
     margin-top: 80px;
@@ -137,6 +174,9 @@ a.green-link {
     max-width: 980px;
     min-width: 425px;
     padding: 15px;
+}
+.stickynav-list {
+    float: right;
 }
 .stickynav-list,
 .stickynav-item {
@@ -150,12 +190,9 @@ a.green-link {
 .stickynav-item a {
     color: #fff;
 }
-.page-links {
-    margin-left: 139px;
-}
 .social-media {
     position: relative;
-    top: 5px;
+    top: 15px;
     margin-left: 7px;
 }
 .social-media a {
@@ -187,12 +224,18 @@ a.green-link {
     height: 24px;
     background: #fff;
     position: relative;
-    margin-left: 30px;
+    margin-left: 10px;
     text-indent: 100%;
     background: url(../img/burger-icon.png) top left no-repeat;
     cursor: pointer;
 }
-@media screen and (max-width: 1080px){
+@media screen and (min-width: 860px){
+    .page-links {
+        position: relative;
+        top: 15px;
+    }
+}
+@media screen and (max-width: 860px){
     .page-links {
         display: none;
     }
@@ -205,16 +248,88 @@ a.green-link {
         top: 16px;
     }
     #toggle-content:checked ~ .page-links {
-        border: 1px solid white;
         padding: 15px;
         display: block;
-        width: 200px;
+        width: 100%;
+        background: #111;
         position: absolute;
         right: 0;
-        background: #0e0d0e;
+        margin-top: 25px;
+        border-top: 1px solid #252525;
+    }
+    .fixed #toggle-content:checked ~ .page-links {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        margin-top: 0;
     }
     #toggle-content:checked ~ .page-links .stickynav-item {
         display: block;
+    }
+}
+
+
+/* scroll background effect */
+.scrollbg-image {
+    position: absolute;
+}
+
+
+/* click to active google maps */
+.maps-click-to-active {
+    position: absolute;
+    margin-top: -340px;
+    height: 340px;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* contact form */
+.contactform {
+    margin: 40px 90px;
+    text-align: left;
+}
+@media screen and (max-width: 625px){
+    .contactform {
+        margin: 40px 0;
+    }
+}
+.contactform-left, 
+.contactform-right {
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.contactform-left {
+    width: 330px;
+}
+.contactform-label {
+    display: block;
+    height: 45px;
+    font-weight: 500;
+    color: #34495e;
+    font-size: 18px;
+}
+.contactform-input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid #ebedee;
+}
+.contactform-input:focus {
+    outline: 0;
+    border: 2px solid #ccc;
+}
+.contactform-textarea {
+    width: 455px;
+    height: 155px;
+}
+@media screen and (max-width: 540px){
+    .contactform-textarea {
+        width: 300px;
     }
 }
 

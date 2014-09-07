@@ -1,0 +1,76 @@
+.casestudy {
+    background: #0e0d0e;/* url('../reference/casestudy.jpg') top center no-repeat;/**/
+}
+.casestudy .down-arrow {
+    margin: 55px 0;   
+}
+.casestudy a,
+.casestudy a:hover {
+    color: #1abc9c;
+}
+
+.stickynav-item a {
+    color: #999;
+}
+.stickynav-item a:hover,
+.stickynav-item a.active {
+    color: #fff;
+}
+
+.intro {
+    height: 880px;
+    padding-top: 480px;
+    text-align: center;
+    color: #fff;
+    margin-top: 80px;
+    background-position-x: center;
+    overflow: hidden;
+}
+.intro small {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    color: #a5a5a5;
+}
+.intro h1 {
+    font-size: 43px;
+    margin-top: 6px;
+    margin-bottom: 23px;
+}
+.intro p {
+    max-width: 820px;
+    margin: 0 auto;
+    font-size: 26px;
+    padding: 0 20px;
+}
+
+.main {
+    background: #fff;
+    padding: 50px 0;
+}
+
+.content {
+    margin: auto;
+    max-width: 620px;
+
+    color: #7f8c8d;
+    font-size: 18px;
+    line-height: 30px;
+}
+.content h1,
+.content h2,
+.content h3 {
+    font-weight: 500;
+    font-size: 23px;
+    margin: 16px 0;
+}
+.content p {
+    margin: 18px 0;
+}
+.content blockquote {
+    padding: 16px 0;
+    margin: 36px 0;
+    border: 1px solid #aaa;
+    border-left: 0;
+    border-right: 0;
+}

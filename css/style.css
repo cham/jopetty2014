@@ -59,7 +59,6 @@ a.green-link {
     max-width: 1200px;
     min-width: 425px;
     overflow: hidden;
-    background: #fff;
 }
 .innercolumn {
     margin: 0 auto;
@@ -189,6 +188,10 @@ a.green-link {
 }
 .stickynav-item a {
     color: #fff;
+}
+.stickynav-item a:hover,
+.stickynav-item a.active {
+    color: #999;
 }
 .social-media {
     position: relative;
@@ -333,3 +336,27 @@ a.green-link {
     }
 }
 
+/* footer */
+.getintouch-details {
+    background: url(../img/map.jpg) top center no-repeat;
+    background-position-y: -200px;
+    /*background: url(../reference/map.jpg) top center no-repeat;*/
+    height: 525px;
+}
+.getintouch-details .innercolumn {
+    max-width: 330px;
+    padding-top: 85px;
+    text-align: center;
+    color: #fff;
+}
+.getintouch-details h1 {
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.getintouch-icons {
+    margin-top: 65px;
+    text-align: left;
+    font-size: 26px;
+    font-weight: 500;
+    color: #14ddb3;
+}

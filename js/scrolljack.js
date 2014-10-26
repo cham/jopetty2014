@@ -13,13 +13,13 @@ var scrolljacker = (function(){
     function ScrollJack(options){
         options = options || {};
 
-        this.duration = options.duration || 1000;
+        this.speed = options.speed;
     }
 
     ScrollJack.prototype.scrollTo = function scrollTo(y, callback){
         var startValue = document.body.scrollTop;
-        var duration = this.duration;
         var delta = y - startValue;
+        var duration = this.speed;
         var start = Date.now();
 
         function tick(){
@@ -40,7 +40,7 @@ var scrolljacker = (function(){
     };
 
     return new ScrollJack({
-        duration: 750
+        speed: 1000
     });
 })();
 
@@ -55,7 +55,6 @@ function onClickLink(link, adjustY){
         var top = linkedNode.getBoundingClientRect().top;
 
         scrolljacker.scrollTo(top + document.body.scrollTop + adjustY);
-        window.top.location.hash = id;
     };
 }
 

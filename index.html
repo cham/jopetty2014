@@ -28,8 +28,8 @@
                 You've come to the right place. I specialise in writing unique website copy,
                 creating dynamic content strategies, and saying more with less.
             </p>
-            <a href="index.html#contact" class="button button-solid-green">Get in touch</a>
-            <a href="index.html#about" class="button button-outline-white">See what I do</a>
+            <a href="#contact" class="button button-solid-green scrolljack" data-scrolltoid="contact">Get in touch</a>
+            <a href="#about" class="button button-outline-white scrolljack" data-scrolltoid="about">See what I do</a>
         </header>
 
         <nav class="stickynav">
@@ -43,10 +43,10 @@
                 </ul>
                 <input class="toggler" type="checkbox" id="toggle-content">
                 <ul class="stickynav-list page-links">
-                    <li class="stickynav-item"><a href="#about">About</a></li>
-                    <li class="stickynav-item"><a href="#services">Services</a></li>
-                    <li class="stickynav-item"><a href="#case-studies">Case Studies</a></li>
-                    <li class="stickynav-item"><a href="#contact">Contact</a></li>
+                    <li class="stickynav-item"><a href="#about" class="scrolljack" data-scrolltoid="about">About</a></li>
+                    <li class="stickynav-item"><a href="#services" class="scrolljack" data-scrolltoid="services">Services</a></li>
+                    <li class="stickynav-item"><a href="#case-studies" class="scrolljack" data-scrolltoid="case-studies">Case Studies</a></li>
+                    <li class="stickynav-item"><a href="#contact" class="scrolljack" data-scrolltoid="contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -90,7 +90,7 @@
                 </div>
             </div>
             <p class="about-getintouch">
-                <a href="index.html#contact" class="green-link">Get in touch now</a> to find out more about my rates and availability
+                <a href="#contact" class="green-link scrolljack" data-scrolltoid="contact">Get in touch now</a> to find out more about my rates and availability
             </p>
             <img src="img/logo-peep.png" width="131" height="61">
         </section>
@@ -133,7 +133,7 @@
                     </p>
                 </div>
             </div>
-            <a href="#" class="button button-outline-green">GET IN TOUCH</a>
+            <a href="#contact" class="button button-outline-green scrolljack" data-scrolltoid="contact">GET IN TOUCH</a>
         </section>
 
         <section class="case-studies-intro scrollbg" id="case-studies">
@@ -256,5 +256,6 @@
 
     </div>
     <script src="js/homepage.js"></script>
+    <script src="js/scrolljack.js"></script>
 </body>
 </html>

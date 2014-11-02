@@ -17,7 +17,7 @@ var scrolljacker = (function(){
     }
 
     ScrollJack.prototype.scrollTo = function scrollTo(y, callback){
-        var startValue = document.body.scrollTop;
+        var startValue = document.body.scrollTop || window.scrollY || 0;
         var delta = y - startValue;
         var duration = this.speed;
         var start = Date.now();
@@ -27,7 +27,11 @@ var scrolljacker = (function(){
             var scrollPos = easeInOutCubic(progress, startValue, delta, duration);
 
             if(progress < duration){
-                document.body.scrollTop = scrollPos;
+                if(document.body.scrollTop){
+                    document.body.scrollTop = scrollPos;
+                }else{
+                    window.scroll(0, scrollPos);
+                }
                 requestAnimationFrame(tick);
             }else{
                 if(callback){
@@ -53,8 +57,9 @@ function onClickLink(link, adjustY){
         var id = link.dataset.scrolltoid;
         var linkedNode = document.getElementById(id);
         var top = linkedNode.getBoundingClientRect().top;
+        var scrollTop = document.body.scrollTop || window.scrollY || 0;
 
-        scrolljacker.scrollTo(top + document.body.scrollTop + adjustY);
+        scrolljacker.scrollTo(top + scrollTop + adjustY);
     };
 }
 

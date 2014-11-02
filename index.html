@@ -8,7 +8,7 @@
     <link href="css/normalize.3.0.1.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/homepage.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:300,100,200,500" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,100,200,500,700" rel="stylesheet" type="text/css">
     <script src="js/jquery-2.1.1.min.js"></script>
     <script>
     function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(50.8229829,-0.14153729999998177),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(50.8229829, -0.14153729999998177)});infowindow = new google.maps.InfoWindow({content:"<b>Jo Petty Copywriter</b><br>37 Ship Street<br>Brighton" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}
@@ -18,7 +18,7 @@
 <![endif]-->
 </head>
 
-<body class="homepage">
+<body class="homepage" id="top">
     <div class="column-wrapper">
         
         <header class="splash scrollbg">
@@ -34,7 +34,7 @@
 
         <nav class="stickynav">
             <div class="nav-content">
-                <img src="img/logo-nav.png">
+                <a href="#top" class="scrolljack" data-scrolltoid="top"><img src="img/logo-nav.png"></a>
                 <label class="burger-menu" for="toggle-content">Menu</label>
                 <ul class="stickynav-list social-media">
                     <li class="stickynav-item"><a href="https://twitter.com/joapet" class="twitter">Twitter</a></li>
@@ -215,14 +215,34 @@
 
         <section class="whitesection testimonial">
             <img src="img/quotes.png" width="64" height="45">
-            <div class="innercolumn">
+            <div class="innercolumn quote-slideshow">
                 <h1 class="testimonial-quote lighttext">
                     Jo delivered great copy on a short timescale taking into account
                     both user and stakeholder objectives. The clients were very
                     pleased with her work and so were we.
                 </h1>
                 <div class="testimonial-citation">
-                    Crispin Read - White Fuse Media
+                    Crispin Read - White Fuse Media ONE
+                </div>
+                <div class="tinyslides">
+
+                    <h1 class="testimonial-quote lighttext">
+                        Some text here about stuff foo bar bish bosh lorem ipsum 
+                        dolor sit amet. Quid pro coquus est in culina.
+                    </h1>
+                    <div class="testimonial-citation">
+                        Senator Neigh - Neighs TWO
+                    </div>
+
+                    <h1 class="testimonial-quote lighttext">
+                        Jo delivered great copy on a short timescale taking into account
+                        both user and stakeholder objectives. The clients were very
+                        pleased with her work and so were we.
+                    </h1>
+                    <div class="testimonial-citation">
+                        Crispin Read - White Fuse Media THREE
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -263,11 +283,17 @@
                     <p class="telephone">01273 251512</p>
                     <p class="email">hello@jopetty.co.uk</p>
                 </div>
+                <div class="getintouch-social">
+                    <a href="https://twitter.com/joapet" class="getintouch-twitter">Twitter</a>
+                    <a href="https://www.linkedin.com/in/jopetty" class="getintouch-linkedin">LinkedIn</a>
+                    <a href="https://plus.google.com/u/1/+JoPettyCopywritingBrighton/posts" class="getintouch-gplus">Google+</a>
+                </div>
             </div>
         </section>
 
     </div>
     <script src="js/homepage.js"></script>
     <script src="js/scrolljack.js"></script>
+    <script src="js/tinyslideshow.js"></script>
 </body>
 </html>

@@ -340,7 +340,7 @@ a.green-link {
 .getintouch-details {
     background: url(../img/map.jpg) top center no-repeat;
     background-position-y: -200px;
-    /*background: url(../reference/map.jpg) top center no-repeat;*/
+    /*background: url(../reference/footer.jpg) top center no-repeat;*/
     height: 525px;
 }
 .getintouch-details .innercolumn {
@@ -352,11 +352,41 @@ a.green-link {
 .getintouch-details h1 {
     font-weight: 300;
     margin-bottom: 15px;
+    margin-top: 4px;
 }
 .getintouch-icons {
-    margin-top: 65px;
+    margin-top: 116px;
     text-align: left;
-    font-size: 26px;
-    font-weight: 500;
+    font-size: 25px;
+    line-height: 36px;
+    font-weight: 700;
     color: #14ddb3;
+}
+.getintouch-icons .telephone,
+.getintouch-icons .email {
+    background: url(../img/green-telephone.png) center left no-repeat;
+    padding-left: 48px;
+}
+.getintouch-icons .email {
+    background: url(../img/green-envelope.png) center left no-repeat;
+    font-size: 30px;
+}
+.getintouch-social {
+    margin-top: 56px;
+}
+.getintouch-social a {
+    display: inline-block;
+    text-indent: 100%;
+    width: 32px;
+    height: 32px;
+    margin: 9px;
+}
+.getintouch-twitter {
+    background: url(../img/twitter-large.png) center center no-repeat;
+}
+.getintouch-linkedin {
+    background: url(../img/linkedin-large.png) center center no-repeat;
+}
+.getintouch-gplus {
+    background: url(../img/gplus-large.png) center center no-repeat;
 }

@@ -19,7 +19,7 @@
 
 .intro {
     height: 750px;
-    padding-top: 250px;
+    padding-top: 220px;
     text-align: center;
     color: #fff;
     margin-top: 80px;
@@ -77,4 +77,18 @@
     border: 1px solid #aaa;
     border-left: 0;
     border-right: 0;
+}
+
+.all-case-studies {
+    text-align: center;
+    margin-top: 40px;
+}
+.all-case-studies .button-outline-green {
+    display: inline-block;
+}
+
+.intro-banner {
+    padding: 30px;
+    background: #000;
+    background: rgba(0,0,0,0.8);
 }

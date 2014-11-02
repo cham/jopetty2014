@@ -19,7 +19,7 @@
 
         <nav class="stickynav fixed">
             <div class="nav-content">
-                <img src="../../img/logo-nav.png">
+                <a href="../../"><img src="../../img/logo-nav.png"></a>
                 <label class="burger-menu" for="toggle-content">Menu</label>
                 <ul class="stickynav-list social-media">
                     <li class="stickynav-item"><a href="https://twitter.com/joapet" class="twitter">Twitter</a></li>
@@ -40,13 +40,15 @@
         <!-- intro -->
         <!-- background image, title, header, paragraph -->
         <header class="intro" style="background-image:url(img/forum-for-the-future.jpg)">
-            <small>Case Studies</small>
-            <h1 class="lighttext">
-                Forum For The Future: on site copy for redesign
-            </h1>
-            <p class="lighttext">
-                <a href="http://www.forumforthefuture.org/" target="_blank">Forum for the Future</a> is a not-for-profit which works with companies and organisations on sustainability issues. A global organisation, they were redesigning their website and required new copy to bring their website into a consistent tone of voice.
-            </p>
+            <div class="intro-banner">
+                <small>Case Studies</small>
+                <h1 class="lighttext">
+                    Forum For The Future: on site copy for redesign
+                </h1>
+                <p class="lighttext">
+                    <a href="http://www.forumforthefuture.org/" target="_blank">Forum for the Future</a> is a not-for-profit which works with companies and organisations on sustainability issues. A global organisation, they were redesigning their website and required new copy to bring their website into a consistent tone of voice.
+                </p>
+            </div>
             <a href="#mainsection" class="scrolljack" data-scrolltoid="mainsection"><img class="down-arrow" src="../../img/down.png"></a>
         </header>
         <!-- end intro -->
@@ -89,6 +91,9 @@
                 </p>
                 <!-- end content -->
 
+                <div class="all-case-studies">
+                    <a href="../" class="button button-outline-green">ALL CASE STUDIES</a>
+                </div>
             </div>
         </section>
 
@@ -109,5 +114,14 @@
 
     </div>
     <script src="../../js/scrolljack.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39937093-1', 'jopetty.co.uk');
+    ga('send', 'pageview');
+    </script>
 </body>
 </html>

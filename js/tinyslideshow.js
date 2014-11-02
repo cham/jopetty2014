@@ -38,7 +38,7 @@
             var sliceStart;
 
             if(iterator % nodesPerSlide === 0){
-                sliceStart = memo.length * iterator;
+                sliceStart = nodesPerSlide * memo.length;
                 memo.push(allSlideNodes.slice(sliceStart, sliceStart + nodesPerSlide));
             }
 

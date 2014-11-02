@@ -1,0 +1,10 @@
+Worker listening on port 3025
+[90mGET / [33m404 [90m8ms[0m
+[90mPOST / [32m200 [90m57ms[0m
+Message sent: 250 2.0.0 OK 1405965636 ft6sm11086551wic.0 - gsmtp
+[90mPOST / [32m200 [90m4ms[0m
+Message sent: 250 2.0.0 OK 1405965656 fw4sm44366104wib.19 - gsmtp
+[90mPOST / [32m200 [90m4ms[0m
+Message sent: 250 2.0.0 OK 1406022339 dn3sm52004855wib.12 - gsmtp
+[90mPOST / [33m400 [90m2ms - 44b[0m
+[90mPOST / [33m400 [90m31ms - 44b[0m

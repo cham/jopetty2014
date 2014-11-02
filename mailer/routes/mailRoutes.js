@@ -15,8 +15,9 @@ function sendEmail(name, email, message){
     // setup e-mail data with unicode symbols
     var mailOptions = {
         from: name + ' <' + email + '>',
-        to: 'danneame@gmail.com',
-        subject: 'Message from the website',
+        //to: 'danneame@gmail.com',
+        to: 'hello@jopetty.co.uk',
+        subject: 'Internet web message.',
         text: message
     };
 
@@ -55,10 +56,6 @@ function requireFormParams(req, res, next){
 }
 
 router.post('/', requireFormParams, function(req, res){
-    console.log(req.param.myname);
-    console.log(req.param.email);
-    console.log(req.param.message);
-
     sendEmail(req.param.myname, req.param.email, req.param.message);
     res.end();
 });

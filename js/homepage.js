@@ -64,8 +64,9 @@
         });
     }
 
-    ScrollEffect.prototype.update = function update(windowY, windowHeight){
+    ScrollEffect.prototype.update = function update(windowY, windowWidth, windowHeight){
         var hitzonePadding = 300,
+            scalingFactor = windowWidth / 1440,
             progress,
             y;
 
@@ -78,6 +79,7 @@
 
         progress = (1 + (windowY - this.y) / this.height)/2;
         y = this.startY + Math.floor((this.endY - this.startY) * progress);
+        y *= scalingFactor;
 
         if(y !== this.currentY){
             this.$node.css({
@@ -103,10 +105,11 @@
 
     function updateScrollers(){
         var scrollY = $window.scrollTop(),
-            windowHeight = $(window).height();
+            windowWidth = $window.width(),
+            windowHeight = $window.height();
 
         scrollers.forEach(function(scroller){
-            scroller.update(scrollY, windowHeight);
+            scroller.update(scrollY, windowWidth, windowHeight);
         });
     }
 
@@ -140,7 +143,7 @@
     }, 50));
     $(window).bind('scroll', debounce(function(){
         updateScrollers();
-    }, 75));
+    }, 50));
 
     $(window).bind('resize', throttle(function(){
         scrollers = buildScrollers();

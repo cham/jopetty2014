@@ -279,12 +279,16 @@ a.green-link {
 
 
 /* click to active google maps */
+.maps-wrapper {
+    position: relative;
+}
 .maps-click-to-active {
     position: absolute;
-    margin-top: -340px;
-    height: 340px;
     cursor: pointer;
-    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 

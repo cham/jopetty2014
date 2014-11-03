@@ -48,7 +48,7 @@
     }
 
     function ScrollEffect($node){
-        var transitionValue = 'background-position 0.2s ease-in-out';
+        var transitionValue = 'background-position 0.15s ease-out';
 
         this.$node = $node;
         this.y = $node.position().top;
@@ -140,7 +140,7 @@
     }, 50));
     $(window).bind('scroll', debounce(function(){
         updateScrollers();
-    }, 150));
+    }, 75));
 
     $(window).bind('resize', throttle(function(){
         scrollers = buildScrollers();

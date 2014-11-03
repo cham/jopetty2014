@@ -343,7 +343,7 @@ a.green-link {
 .getintouch-details {
     background: url(../img/map.jpg) top center no-repeat;
     background-position-y: -200px;
-    background-size: 100%;
+    background-size: cover;
     height: 525px;
 }
 .getintouch-details .innercolumn {

@@ -172,6 +172,7 @@ a.green-link {
     max-width: 980px;
     min-width: 425px;
     padding: 15px;
+    padding-top: 22px;
 }
 .stickynav-list {
     float: right;

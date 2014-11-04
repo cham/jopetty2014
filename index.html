@@ -10,7 +10,6 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/homepage.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,100,200,500,700" rel="stylesheet" type="text/css">
-    <script src="js/jquery-2.1.1.min.js"></script>
     <script>
     function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(50.8229829,-0.14153729999998177),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(50.8229829, -0.14153729999998177)});infowindow = new google.maps.InfoWindow({content:"<b>Jo Petty Copywriter</b><br>37 Ship Street<br>Brighton" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}
     </script>
@@ -298,6 +297,7 @@
         </section>
 
     </div>
+    <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/homepage.js"></script>
     <script src="js/scrolljack.js"></script>
     <script src="js/tinyslideshow.js"></script>

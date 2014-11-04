@@ -10,6 +10,14 @@ var scrolljacker = (function(){
         return -c/2 * ((--t)*(t-2) - 1) + b;
     }
 
+    function getScroll(){
+        return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop || window.scrollY || 0;
+    }
+
+    function setScroll(y){
+        window.scroll(0, y);
+    }
+
     function ScrollJack(options){
         options = options || {};
 
@@ -17,7 +25,7 @@ var scrolljacker = (function(){
     }
 
     ScrollJack.prototype.scrollTo = function scrollTo(y, callback){
-        var startValue = document.body.scrollTop || window.scrollY || 0;
+        var startValue = getScroll();
         var delta = y - startValue;
         var duration = this.speed;
         var start = Date.now();
@@ -27,11 +35,7 @@ var scrolljacker = (function(){
             var scrollPos = easeInOutCubic(progress, startValue, delta, duration);
 
             if(progress < duration){
-                if(document.body.scrollTop){
-                    document.body.scrollTop = scrollPos;
-                }else{
-                    window.scroll(0, scrollPos);
-                }
+                setScroll(scrollPos);
                 requestAnimationFrame(tick);
             }else{
                 if(callback){

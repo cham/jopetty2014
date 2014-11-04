@@ -1,6 +1,13 @@
 /*
  * scrolljack.js
  */
+function getScroll(){
+    return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop || window.scrollY || 0;
+}
+function setScroll(y){
+    window.scroll(0, y);
+}
+
 var scrolljacker = (function(){
     function easeInOutCubic(t, b, c, d){
         t /= d/2;
@@ -8,14 +15,6 @@ var scrolljacker = (function(){
             return c/2*t*t + b;
         }
         return -c/2 * ((--t)*(t-2) - 1) + b;
-    }
-
-    function getScroll(){
-        return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop || window.scrollY || 0;
-    }
-
-    function setScroll(y){
-        window.scroll(0, y);
     }
 
     function ScrollJack(options){
@@ -61,7 +60,7 @@ function onClickLink(link, adjustY){
         var id = link.dataset.scrolltoid;
         var linkedNode = document.getElementById(id);
         var top = linkedNode.getBoundingClientRect().top;
-        var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop || window.scrollY || 0;
+        var scrollTop = getScroll();
 
         scrolljacker.scrollTo(top + scrollTop + adjustY);
     };

@@ -394,3 +394,25 @@ a.green-link {
 .getintouch-gplus {
     background: url(../img/gplus-large.png) center center no-repeat;
 }
+
+/* form feedback */
+.form-error ,
+.form-success {
+    color: white;
+    border-radius: 10px;
+    padding: 3px 12px;
+    cursor: pointer;
+}
+.form-error {
+    position: absolute;
+    margin-top: -63px;
+    background: #c22;
+    opacity: 0.7;
+}
+.form-success {
+    background: #8BA870;
+    width: 330px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}

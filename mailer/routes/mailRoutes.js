@@ -23,12 +23,12 @@ function sendEmail(name, email, message, callback){
 }
 
 function endWithBadRequest(res, msg){
-    res.redirect(301, 'http://jopetty.co.uk/?err=400&msg=' + msg);
+    res.redirect(301, 'http://jopetty.co.uk/?err=400&msg=' + msg + '#contact');
     res.end();
 }
 
 function endWithSuccess(res){
-    res.redirect(301, 'http://jopetty.co.uk/?success');
+    res.redirect(301, 'http://jopetty.co.uk/?success#contact');
     res.end();
 }
 

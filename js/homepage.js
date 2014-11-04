@@ -113,6 +113,40 @@
         });
     }
 
+    function addValidation($form){
+        $form.submit(function(e){
+            var checks = {
+                myname: 'Please provide your name',
+                email: 'Please provide your email',
+                message: 'Please provide a message'
+            };
+            var errors = Object.keys(checks).filter(function(key){
+                return !$form.find('[name=' + key + ']').val();
+            });
+
+            $('.form-error').remove();
+            if(!errors.length){
+                return;
+            }
+
+            e.preventDefault();
+            errors.forEach(function(key){
+                $form.find('[name=' + key + ']').after('<div class="form-error">' + checks[key] + '</div>');
+            });
+
+            $('.form-error').click(function(){
+                $(this).remove();
+            });
+        });
+
+        if(location.href.indexOf('success#contact') > -1){
+            $('.contactform').prepend('<div class="form-success">Thank you, your message has been sent!</div>');
+            $('.form-success').click(function(){
+                $(this).remove();
+            });
+        }
+    }
+
     function debounce(cb, debounceMs){
         var debounceTimer = 0;
 
@@ -153,6 +187,7 @@
     scrollers = buildScrollers();
     updateScrollers();
     setNavPosition();
+    addValidation($('.contactform'));
 
     $clickToActivate.click(function(){
         init_map();

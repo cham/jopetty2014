@@ -61,7 +61,7 @@ function onClickLink(link, adjustY){
         var id = link.dataset.scrolltoid;
         var linkedNode = document.getElementById(id);
         var top = linkedNode.getBoundingClientRect().top;
-        var scrollTop = document.body.scrollTop || window.scrollY || 0;
+        var scrollTop = getScroll();
 
         scrolljacker.scrollTo(top + scrollTop + adjustY);
     };

@@ -49,14 +49,18 @@ function requireFormParams(req, res, next){
 }
 
 router.post('/', requireFormParams, function(req, res){
-    sendEmail(req.param.myname, req.param.email, req.param.message, function(err, data){
-        if(err){
-            console.log(err);
-            return endWithBadRequest(res, 'Sorry! Something is up with the email service');
-        }
-        console.log('Email sent', data.response);
-        endWithSuccess(res);
-    });
+    if(req.get('Referer').indexOf('http://jopetty.co.uk') === 0){
+        sendEmail(req.param.myname, req.param.email, req.param.message, function(err, data){
+            if(err){
+                console.log(err);
+                return endWithBadRequest(res, 'Sorry! Something is up with the email service');
+            }
+            console.log('Email sent', data.response);
+            endWithSuccess(res);
+        });
+    }else{
+        endWithBadRequest(res, 'Sorry! Something is up with the email service');
+    }
 });
 
 module.exports = router;

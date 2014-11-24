@@ -6,6 +6,7 @@
     }
 
     var $window = $(window),
+        $contactform = $('.contactform'),
         $nav = $('.stickynav'),
         $clickToActivate = $('.maps-click-to-active'),
         numWigglers = $('.wiggler').length,
@@ -147,6 +148,14 @@
         }
     }
 
+    function enableContactForm($form){
+        function enable(){
+            $form.attr('action', 'http://jopetty.co.uk:3025/');
+            $window.unbind('mousemove', enable);
+        }
+        $window.bind('mousemove', enable);
+    }
+
     function debounce(cb, debounceMs){
         var debounceTimer = 0;
 
@@ -172,14 +181,13 @@
         };
     }
 
-    $(window).bind('scroll', debounce(function(){
+    $window.bind('scroll', debounce(function(){
         setNavPosition();
     }, 50));
-    $(window).bind('scroll', debounce(function(){
+    $window.bind('scroll', debounce(function(){
         updateScrollers();
     }, 50));
-
-    $(window).bind('resize', throttle(function(){
+    $window.bind('resize', throttle(function(){
         scrollers = buildScrollers();
         updateScrollers();
     }, 150));
@@ -187,11 +195,12 @@
     scrollers = buildScrollers();
     updateScrollers();
     setNavPosition();
-    addValidation($('.contactform'));
+    addValidation($contactform);
+    enableContactForm($contactform);
 
     $clickToActivate.click(function(){
         init_map();
-        $(window).bind('resize', throttle(function(){
+        $window.bind('resize', throttle(function(){
             init_map();
         }, 500));
         $(this).remove();
